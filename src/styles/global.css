@@ -5,13 +5,13 @@
 }
 
 html {
-  background: #ffffff;
+  background: #000000;
 }
 
 body {
   margin: 0;
-  color: #000000;
-  background: #ffffff;
+  color: #ffffff;
+  background: #000000;
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
   line-height: 1.55;
@@ -20,12 +20,12 @@ body {
 }
 
 ::selection {
-  color: #ffffff;
-  background: #000000;
+  color: #000000;
+  background: #ffffff;
 }
 
 :focus-visible {
-  outline: 2px solid #000000;
+  outline: 2px solid #ffffff;
   outline-offset: 3px;
 }
 
@@ -69,8 +69,8 @@ ol {
   top: 8px;
   left: 8px;
   padding: 8px 12px;
-  color: #ffffff;
-  background: #000000;
+  color: #000000;
+  background: #ffffff;
   transform: translateY(-160%);
 }
 
@@ -92,7 +92,7 @@ ol {
   justify-content: space-between;
   gap: 24px;
   padding: 30px 0 18px;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #ffffff;
 }
 
 .brand {
@@ -132,6 +132,7 @@ main {
 }
 
 .site-logo {
+  filter: grayscale(1) invert(1);
   width: auto;
   height: 128px;
   margin-bottom: 28px;
@@ -158,7 +159,7 @@ h1 {
 
 .page-header {
   padding-bottom: 32px;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #ffffff;
 }
 
 .page-header h1 {
@@ -176,7 +177,7 @@ h1 {
 
 .post-item {
   padding: 28px 0;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #ffffff;
 }
 
 .post-item time {
@@ -211,7 +212,7 @@ h1 {
 
 .post-header {
   padding-bottom: 32px;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #ffffff;
 }
 
 .back-link {
@@ -278,7 +279,7 @@ h1 {
 .prose blockquote {
   margin: 1.6em 0;
   padding-left: 18px;
-  border-left: 2px solid #000000;
+  border-left: 2px solid #ffffff;
   font-style: italic;
 }
 
@@ -288,7 +289,7 @@ h1 {
 
 .prose code {
   padding: 1px 4px;
-  background: #f2f2f2;
+  background: #1a1a1a;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.82em;
 }
@@ -297,8 +298,8 @@ h1 {
   margin: 1.6em 0;
   padding: 16px 18px;
   overflow-x: auto;
-  border: 1px solid #000000;
-  background: #ffffff;
+  border: 1px solid #ffffff;
+  background: #000000;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -312,7 +313,7 @@ h1 {
 .prose pre,
 .prose pre code,
 .prose pre code span {
-  color: #000000 !important;
+  color: #ffffff !important;
   background: transparent !important;
   text-shadow: none !important;
 }
@@ -329,7 +330,7 @@ h1 {
 }
 
 .prose .katex-error {
-  color: #000000;
+  color: #ffffff;
   font-style: italic;
 }
 
@@ -340,13 +341,13 @@ h1 {
 }
 
 .prose img {
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
 }
 
 .prose hr {
   margin: 2em 0;
   border: 0;
-  border-top: 1px solid #000000;
+  border-top: 1px solid #ffffff;
 }
 
 .post-footer {
@@ -355,7 +356,7 @@ h1 {
   gap: 24px;
   margin-top: 42px;
   padding-top: 20px;
-  border-top: 1px solid #000000;
+  border-top: 1px solid #ffffff;
   font-size: 16px;
 }
 
@@ -374,7 +375,7 @@ h1 {
   justify-content: space-between;
   gap: 24px;
   padding: 20px 0 36px;
-  border-top: 1px solid #000000;
+  border-top: 1px solid #ffffff;
   font-size: 16px;
 }
 
