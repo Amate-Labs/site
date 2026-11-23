@@ -1,0 +1,50 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatDate, getPublishedPosts } from "../../lib/blog";
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  type="article"
+  publishedTime={post.data.pubDate.toISOString()}
+>
+  <article>
+    <header class="post-header">
+      <p class="back-link"><a href="/blog/">Blog</a></p>
+      <h1>{post.data.title}</h1>
+      <p class="post-meta">
+        <time datetime={post.data.pubDate.toISOString()}>
+          {formatDate(post.data.pubDate)}
+        </time>
+      </p>
+      <p class="post-description">{post.data.description}</p>
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <footer class="post-footer">
+      <a href="/blog/">Back to blog</a>
+      <a href="/rss.xml">RSS feed</a>
+    </footer>
+  </article>
+</BaseLayout>
