@@ -132,7 +132,6 @@ main {
 }
 
 .site-logo {
-  filter: grayscale(1) invert(1);
   width: auto;
   height: 128px;
   margin-bottom: 28px;
